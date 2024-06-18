@@ -1,0 +1,448 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: #c04a4a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header .header__nav {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: #1F1D14;
+}
+.header .header__nav .header__logo,
+.header .header__nav .header__right,
+.header .header__nav .header-location {
+  margin: 0 10px;
+}
+.header .header__nav .header__logo {
+  flex-grow: 0.6;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header .header__nav .header__logo img {
+  width: 62px;
+  height: 54px;
+  flex-shrink: 0;
+}
+.header .header__nav .header__logo .header_logo-text {
+  color: #FFF;
+  font-family: "Fira Sans";
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28px;
+}
+.header .header__nav .header__right {
+  flex-grow: 3;
+}
+.header .header__nav .header__right .header__list {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.header .header__nav .header__right .header__list .header__item {
+  margin-right: 30px;
+}
+.header .header__nav .header__right .header__list .header__item:last-child {
+  margin-right: 0;
+}
+.header .header__nav .header__right .header__list .header__item .header__link {
+  padding: 10px 15px;
+  color: var(--white, #FFF);
+  font-family: "Fira Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
+.header .header__nav .header__right .header__list .header__item .header__link:hover {
+  color: yellow;
+  border-bottom: 1px solid yellow;
+}
+.header .header__nav .header-location {
+  flex-grow: 0;
+  color: #FFF;
+  display: flex;
+  gap: 40px;
+}
+.header .header__nav .header-location .header-iphone,
+.header .header__nav .header-location .header-gmail {
+  display: flex;
+  gap: 10px;
+  color: var(--white, #FFF);
+  font-family: "Fira Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.header__shrink {
+  box-shadow: 0px 0px 10px skyblue;
+}
+.header__btns {
+  display: none;
+}
+.header__media-button {
+  display: none;
+}
+.header .kalalog {
+  width: 100%;
+  height: 80px;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+.header .kalalog .katalog-inpbtn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header .kalalog .katalog-inpbtn button {
+  display: inline-flex;
+  padding: 15px 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #1F1D14;
+  gap: 10px;
+}
+.header .kalalog .katalog-inpbtn button .katalog-inpbtn-i {
+  font-size: 20px;
+  color: #FFF;
+}
+.header .kalalog .katalog-inpbtn button .katalog-inpbtn-text {
+  color: var(--white, #FFF);
+  font-family: "Fira Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.header .kalalog .katalog-inpbtn .input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.header .kalalog .katalog-inpbtn .input-container:active .icon {
+  display: none;
+}
+.header .kalalog .katalog-inpbtn .input-container input {
+  width: 450px;
+  height: 55px;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #F2F2F2;
+  padding: 20px;
+  font-size: 18px;
+}
+.header .kalalog .katalog-inpbtn .input-container .icon {
+  position: absolute;
+  right: 0.5rem;
+  font-size: 1.5rem;
+  pointer-events: none;
+}
+.header .kalalog .kalalog-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #FFFFFF;
+}
+.header .kalalog .kalalog-icons .kalalog-icons-iconperson,
+.header .kalalog .kalalog-icons .kalalog-icons-iconlike {
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 3px;
+  background: #F2F2F2;
+  font-size: 20px;
+  transition: 0.5s;
+}
+.header .kalalog .kalalog-icons .kalalog-icons-iconperson:hover,
+.header .kalalog .kalalog-icons .kalalog-icons-iconlike:hover {
+  background: transparent;
+  font-size: 2.4em;
+  color: yellow;
+}
+.header .kalalog .kalalog-icons .kalalog-icons-iconshop {
+  display: inline-flex;
+  padding: 15px 30px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  gap: 5px;
+  border-radius: 5px;
+  background: #F2F2F2;
+  color: #1F1D14;
+  font-family: "Fira Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: 0.5s;
+}
+.header .kalalog .kalalog-icons .kalalog-icons-iconshop:hover {
+  background: transparent;
+  border: 1px solid yellow;
+  color: yellow;
+}
+
+@media (max-width: 1320px) {
+  .header__right {
+    display: none;
+  }
+  .header-location {
+    display: none;
+  }
+  .header__btns {
+    display: block;
+  }
+  .header__btns .header__btn-hamburger {
+    background-color: transparent;
+    font-size: 25px;
+    color: #FFF;
+  }
+}
+@media (max-width: 978px) {
+  .header__media-button {
+    display: block;
+    padding: 10px 15px;
+    border: none;
+    background-color: yellow;
+    color: black;
+  }
+}
+@media (max-width: 768px) {
+  .header .header__nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+  .header .header__nav .header__logo {
+    margin-bottom: 10px;
+  }
+  .header .header__nav .header__btns {
+    align-self: flex-end;
+  }
+  .header .kalalog {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .header .kalalog .katalog-inpbtn {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .header .kalalog .katalog-inpbtn button {
+    width: 100%;
+  }
+  .header .kalalog .katalog-inpbtn .input-container {
+    width: 100%;
+  }
+  .header .kalalog .katalog-inpbtn .input-container input {
+    width: 100%;
+  }
+  .header .kalalog .kalalog-icons {
+    margin-top: 20px;
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+.main {
+  width: 100%;
+  height: 5000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: aqua;
+  margin-top: 5cm;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial, sans-serif";
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background: #f4f4f4;
+}
+
+.hero {
+  width: 99%;
+  margin: 0 auto;
+  display: flex;
+  gap: 10px;
+}
+.hero .hero-caresel {
+  position: relative;
+  width: 70%;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background: #fff;
+}
+.hero .hero-caresel .carousel {
+  position: relative;
+  width: 100%;
+}
+.hero .hero-caresel .carousel .carousel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.hero .hero-caresel .carousel .carousel-slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.hero .hero-caresel .carousel .carousel-slide .carousel-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+.hero .hero-caresel .carousel .carousel-slide .carousel-content .carousel-text {
+  flex: 1;
+  padding-right: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-left: 3cm;
+}
+.hero .hero-caresel .carousel .carousel-slide .carousel-content .carousel-text h2 {
+  color: #1F1D14;
+  font-family: "Fira Sans";
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 67px;
+  margin-bottom: 10px;
+}
+.hero .hero-caresel .carousel .carousel-slide .carousel-content .carousel-text .carousel-btn {
+  display: flex;
+  width: 145px;
+  padding: 15px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border-radius: 10px;
+  border: 2px solid #FBD029;
+  opacity: 0.9;
+  cursor: pointer;
+  text-decoration: none;
+}
+.hero .hero-caresel .carousel .carousel-slide .carousel-content .carousel-text .carousel-btn:hover {
+  background: #FBD029;
+}
+.hero .hero-caresel .carousel .carousel-slide .carousel-content .carousel-img {
+  flex: 1.6;
+}
+.hero .hero-caresel .carousel .carousel-slide .carousel-content .carousel-img img {
+  width: 100%;
+  border-radius: 10px;
+}
+.hero .hero-caresel .carousel .carousel-prev,
+.hero .hero-caresel .carousel .carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 24px;
+  border-radius: 50%;
+}
+.hero .hero-caresel .carousel .carousel-prev {
+  left: 10px;
+}
+.hero .hero-caresel .carousel .carousel-next {
+  right: 10px;
+}
+.hero .hero-layout {
+  width: 30%;
+  height: 100%;
+  background-color: #007bff;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.hero .hero-layout .her0-layout-card {
+  width: 100%;
+  height: 50%;
+  background-color: #ccc;
+  display: flex;
+}
+.hero .hero-layout .her0-layout-card .hlc-text {
+  width: 50%;
+  height: 100%;
+}
+.hero .hero-layout .her0-layout-card .hlc-img {
+  width: 50%;
+  height: 100%;
+}
+.hero .hero-layout .her0-layout-card .hlc-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .carousel-content {
+    flex-direction: column;
+  }
+  .carousel-content .carousel-text,
+  .carousel-content .carousel-img {
+    width: 100%;
+    padding: 10px 0;
+  }
+  .carousel-content .carousel-text img,
+  .carousel-content .carousel-img img {
+    width: 100%;
+  }
+}

@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial, sans-serif';
+  }
+  
+  .main {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: #f4f4f4;
+  }
+  
+  .hero {
+    width: 99%;
+    margin: 0 auto;
+  display: flex;
+  gap: 10px;
+    .hero-caresel {
+      position: relative;
+      width: 70%;
+      overflow: hidden;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      background: #fff;
+  
+      .carousel {
+        position: relative;
+        width: 100%;
+  
+        .carousel-container {
+          display: flex;
+          transition: transform 0.5s ease-in-out;
+        }
+  
+        .carousel-slide {
+          min-width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 20px;
+  
+          .carousel-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            width: 100%;
+  
+            .carousel-text {
+              flex: 1;
+              padding-right: 70px;
+              display: flex;
+              flex-direction: column;
+              gap: 30px;
+  margin-left: 3cm;
+              h2 {
+                color:  #1F1D14;
+                font-family: "Fira Sans";
+                font-size: 42px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: 67px; 
+                margin-bottom: 10px;
+              }
+  
+             
+  
+              .carousel-btn {
+                display: flex;
+                width: 145px;
+                padding: 15px 20px;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+                border-radius: 10px;
+border: 2px solid  #FBD029;
+opacity: 0.9;
+                cursor: pointer;
+                text-decoration: none;
+  
+                &:hover {
+                  background: #FBD029;
+                }
+              }
+            }
+  
+            .carousel-img {
+              flex: 1.6;
+              img {
+                width: 100%;
+                border-radius: 10px;
+              }
+            }
+          }
+        }
+  
+        .carousel-prev,
+        .carousel-next {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background: rgba(0, 0, 0, 0.5);
+          color: #fff;
+          border: none;
+          padding: 10px;
+          cursor: pointer;
+          z-index: 10;
+          font-size: 24px;
+          border-radius: 50%;
+        }
+  
+        .carousel-prev {
+          left: 10px;
+        }
+  
+        .carousel-next {
+          right: 10px;
+        }
+      }
+    }
+  
+    .hero-layout {
+      width: 30%;
+      height: 100%;
+      background-color: #007bff;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+.her0-layout-card{
+    width: 100%;
+height: 50%;
+background-color: #ccc;
+display: flex;
+.hlc-text{
+width: 50%;
+height: 100%;
+}
+.hlc-img{
+    width: 50%;
+height: 100%;
+img{
+    width: 100%;
+height: 100%;
+object-fit: cover;
+}
+}
+}
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-content {
+      flex-direction: column;
+  
+      .carousel-text,
+      .carousel-img {
+        width: 100%;
+        padding: 10px 0;
+  
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  

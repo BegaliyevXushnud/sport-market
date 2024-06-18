@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+%global_hover {
+    &:hover {
+        background: none;
+        color: #A259FF;
+        border: 1px solid #A259FF;
+    }
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: #c04a4a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .header__nav {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        background: #1F1D14;
+
+        .header__logo,
+        .header__right,
+        .header-location {
+            margin: 0 10px;
+        }
+
+        .header__logo {
+            flex-grow: 0.6;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            img {
+                width: 62px;
+                height: 54px;
+                flex-shrink: 0;
+            }
+
+            .header_logo-text {
+                color: #FFF;
+                font-family: "Fira Sans";
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 28px;
+            }
+        }
+
+        .header__right {
+            flex-grow: 3;
+            .header__list {
+                display: flex;
+                gap: 10px;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                .header__item {
+                    margin-right: 30px;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    .header__link {
+                        padding: 10px 15px;
+                        color: var(--white, #FFF);
+                        font-family: "Fira Sans";
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        text-decoration: none;
+
+                        &:hover {
+                            color: yellow;
+                            border-bottom: 1px solid yellow;
+                        }
+                    }
+                }
+            }
+        }
+
+        .header-location {
+            flex-grow: 0;
+            color: #FFF;
+            display: flex;
+            gap: 40px;
+
+            .header-iphone,
+            .header-gmail {
+                display: flex;
+                gap: 10px;
+                color: var(--white, #FFF);
+                font-family: "Fira Sans";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
+    }
+
+    &__shrink {
+        box-shadow: 0px 0px 10px skyblue;
+    }
+
+    &__btns {
+        display: none;
+    }
+
+    &__media-button {
+        display: none;
+    }
+
+    .kalalog {
+        width: 100%;
+        height: 80px;
+        background-color: #FFFFFF;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 40px;
+
+        .katalog-inpbtn {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            button {
+                display: inline-flex;
+                padding: 15px 40px;
+                justify-content: center;
+                align-items: center;
+                border-radius: 5px;
+                background: #1F1D14;
+                gap: 10px;
+
+                .katalog-inpbtn-i {
+                    font-size: 20px;
+                    color: #FFF;
+                }
+
+                .katalog-inpbtn-text {
+                    color: var(--white, #FFF);
+                    font-family: "Fira Sans";
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
+
+            .input-container {
+                position: relative;
+                display: flex;
+                align-items: center;
+
+                &:active .icon {
+                    display: none;
+                }
+
+                input {
+                    width: 450px;
+                    height: 55px;
+                    border: none;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 5px;
+                    background: #F2F2F2;
+                    padding: 20px;
+                    font-size: 18px;
+                }
+
+                .icon {
+                    position: absolute;
+                    right: 0.5rem;
+                    font-size: 1.5rem;
+                    pointer-events: none;
+                }
+            }
+        }
+
+        .kalalog-icons {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background-color: #FFFFFF;
+
+            .kalalog-icons-iconperson,
+            .kalalog-icons-iconlike {
+                width: 45px;
+                height: 45px;
+                flex-shrink: 0;
+                border: none;
+                border-radius: 3px;
+                background: #F2F2F2;
+                font-size: 20px;
+                transition: 0.5s;
+
+                &:hover {
+                    background: transparent;
+                    font-size: 2.4em;
+                    color: yellow;
+                }
+            }
+
+            .kalalog-icons-iconshop {
+                display: inline-flex;
+                padding: 15px 30px;
+                justify-content: center;
+                align-items: center;
+                border: none;
+                gap: 5px;
+                border-radius: 5px;
+                background: #F2F2F2;
+                color: #1F1D14;
+                font-family: "Fira Sans";
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                transition: 0.5s;
+
+                &:hover {
+                    background: transparent;
+                    border: 1px solid yellow;
+                    color: yellow;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1320px) {
+    .header__right {
+        display: none;
+    }
+
+    .header-location {
+        display: none;
+    }
+
+    .header__btns {
+        display: block;
+
+        .header__btn-hamburger {
+            background-color: transparent;
+            font-size: 25px;
+            color: #FFF;
+        }
+    }
+}
+
+@media (max-width: 978px) {
+    .header__media-button {
+        display: block;
+        padding: 10px 15px;
+        border: none;
+        background-color: yellow;
+        color: black;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        .header__nav {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 10px;
+
+            .header__logo {
+                margin-bottom: 10px;
+            }
+
+            .header__btns {
+                align-self: flex-end;
+            }
+        }
+
+        .kalalog {
+            flex-direction: column;
+            padding: 20px;
+
+            .katalog-inpbtn {
+                width: 100%;
+                flex-direction: column;
+                gap: 10px;
+
+                button {
+                    width: 100%;
+                }
+
+                .input-container {
+                    width: 100%;
+                    input {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .kalalog-icons {
+                margin-top: 20px;
+                width: 100%;
+                justify-content: space-around;
+            }
+        }
+    }
+}
