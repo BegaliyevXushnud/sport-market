@@ -4,169 +4,237 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     font-family: 'Arial, sans-serif';
-  }
-  
-  .main {
+}
+
+.main {
     display: flex;
     align-items: center;
     min-height: 100vh;
     background: #f4f4f4;
-  }
-  
-  .hero {
+}
+
+.hero {
     width: 99%;
     margin: 0 auto;
-  display: flex;
-  gap: 10px;
+    display: flex;
+    gap: 10px;
+
     .hero-caresel {
-      position: relative;
-      width: 70%;
-      overflow: hidden;
-      border: 2px solid #ccc;
-      border-radius: 10px;
-      background: #fff;
-  
-      .carousel {
         position: relative;
-        width: 100%;
-  
-        .carousel-container {
-          display: flex;
-          transition: transform 0.5s ease-in-out;
+        width: 70%;
+        overflow: hidden;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        background: #fff;
+
+        .carousel {
+            position: relative;
+            width: 100%;
+
+            .carousel-container {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+            }
+
+            .carousel-slide {
+                min-width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px;
+
+                .carousel-content {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    width: 100%;
+
+                    .carousel-text {
+                        flex: 1;
+                        padding-right: 70px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 30px;
+                        margin-left: 3cm;
+
+                        h2 {
+                            color: #1F1D14;
+                            font-family: "Fira Sans";
+                            font-size: 42px;
+                            font-style: normal;
+                            font-weight: 800;
+                            line-height: 67px;
+                            margin-bottom: 10px;
+                        }
+
+                        .carousel-btn {
+                            display: flex;
+                            width: 145px;
+                            padding: 15px 20px;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 5px;
+                            border-radius: 10px;
+                            border: 2px solid #FBD029;
+                            opacity: 0.9;
+                            cursor: pointer;
+                            text-decoration: none;
+
+                            &:hover {
+                                background: #FBD029;
+                            }
+                        }
+                    }
+
+                    .carousel-img {
+                        flex: 1.6;
+                        img {
+                            width: 100%;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+
+            .carousel-prev,
+            .carousel-next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background: rgba(0, 0, 0, 0.5);
+                color: #fff;
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+                z-index: 10;
+                font-size: 24px;
+                border-radius: 50%;
+            }
+
+            .carousel-prev {
+                left: 10px;
+            }
+
+            .carousel-next {
+                right: 10px;
+            }
         }
-  
-        .carousel-slide {
-          min-width: 100%;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 20px;
-  
-          .carousel-content {
+    }
+
+    .hero-layout {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        .her0-layout-card {
+            width: 100%;
+            height: 50%;
             display: flex;
             align-items: center;
-            gap: 20px;
-            width: 100%;
-  
-            .carousel-text {
-              flex: 1;
-              padding-right: 70px;
-              display: flex;
-              flex-direction: column;
-              gap: 30px;
-  margin-left: 3cm;
-              h2 {
-                color:  #1F1D14;
-                font-family: "Fira Sans";
-                font-size: 42px;
-                font-style: normal;
-                font-weight: 800;
-                line-height: 67px; 
-                margin-bottom: 10px;
-              }
-  
-             
-  
-              .carousel-btn {
+background-color: #fffefe;
+            .hlc-text {
+                width: 50%;
+                height: 60%;
                 display: flex;
-                width: 145px;
-                padding: 15px 20px;
+                flex-direction: column;
                 justify-content: center;
-                align-items: center;
-                gap: 5px;
-                border-radius: 10px;
-border: 2px solid  #FBD029;
-opacity: 0.9;
-                cursor: pointer;
-                text-decoration: none;
-  
-                &:hover {
-                  background: #FBD029;
+                padding: 10px;
+                gap: 20px;
+
+                .hlc-text-h2 {
+                    color: #1F1D14;
+                    font-family: "Fira Sans";
+                    font-size: 28px;
+                    font-style: normal;
+                    font-weight: 800;
+                    line-height: 35px;
                 }
-              }
+
+                .hlc-text-h3 {
+                    font-size: 16px;
+                    color: gainsboro;
+                }
+
+                .hlc-text-h1 {
+                    color: red;
+                    font-size: 30px;
+
+                    .hlc-text-span {
+                        font-size: 16px;
+                    }
+                }
             }
-  
-            .carousel-img {
-              flex: 1.6;
-              img {
+
+            .hlc-img {
+                width: 50%;
+                height: 100%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+
+        .hero-caresel {
+            width: 100%;
+        }
+
+        .hero-layout {
+            width: 100%;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            .her0-layout-card {
                 width: 100%;
-                border-radius: 10px;
-              }
+                height: auto;
+                flex-direction: column;
+
+                .hlc-text, .hlc-img {
+                    width: 100%;
+                    height: auto;
+                    padding: 10px;
+                }
             }
-          }
         }
-  
-        .carousel-prev,
-        .carousel-next {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          background: rgba(0, 0, 0, 0.5);
-          color: #fff;
-          border: none;
-          padding: 10px;
-          cursor: pointer;
-          z-index: 10;
-          font-size: 24px;
-          border-radius: 50%;
-        }
-  
-        .carousel-prev {
-          left: 10px;
-        }
-  
-        .carousel-next {
-          right: 10px;
-        }
-      }
     }
-  
-    .hero-layout {
-      width: 30%;
-      height: 100%;
-      background-color: #007bff;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-.her0-layout-card{
-    width: 100%;
-height: 50%;
-background-color: #ccc;
-display: flex;
-.hlc-text{
-width: 50%;
-height: 100%;
-}
-.hlc-img{
-    width: 50%;
-height: 100%;
-img{
-    width: 100%;
-height: 100%;
-object-fit: cover;
-}
-}
-}
-    }
-  }
-  
-  @media (max-width: 768px) {
+
     .carousel-content {
-      flex-direction: column;
-  
-      .carousel-text,
-      .carousel-img {
-        width: 100%;
-        padding: 10px 0;
-  
-        img {
-          width: 100%;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+
+        .carousel-text,
+        .carousel-img {
+            width: 100%;
+            padding: 10px 0;
+
+            img {
+                width: 100%;
+            }
         }
-      }
+
+        .carousel-text {
+            padding-right: 0;
+            margin-left: 0;
+
+            h2 {
+                font-size: 24px;
+                line-height: 36px;
+            }
+        }
     }
-  }
-  
+}

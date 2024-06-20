@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.quality {
+    width: 90%;
+    max-width: 1280px;
+    margin: 2cm auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h2 {
+        color: var(--, #1F1D14);
+        font-family: "Fira Sans";
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-align: left; 
+    }
+
+    .quality-cards {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px; 
+
+        .quality-cards-card {
+            width: 100%;
+            max-width: 292px;
+            height: 289px;
+            flex-shrink: 0;
+            background-color: #FFFFFF;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            padding: 40px;
+            transition: transform 0.3s, box-shadow 0.3s;
+
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            .qcc-img {
+                width: 120px;
+                height: 120px;
+                display: flex;
+                position: relative;
+                flex-direction: column;
+                align-items: center;
+
+                .sariq {
+                    width: 30px;
+                    height: 30px;
+                    position: absolute;
+                    background-color: #FBD029;
+                    border-radius: 7px;
+                }
+
+                img {
+                    width: 55px;
+                    height: 55px;
+                    position: relative;
+                    right: 20px;
+                    top: 10px;
+                }
+            }
+
+            .qcc-text {
+                p {
+                    color: #000;
+                    font-family: "Fira Sans";
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    text-align: center; 
+                }
+            }
+        }
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .quality {
+        h2 {
+            font-size: 28px; 
+            text-align: center;
+        }
+
+        .quality-cards {
+            .quality-cards-card {
+                max-width: 48%; 
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .quality {
+        h2 {
+            font-size: 24px; 
+        }
+
+        .quality-cards {
+            .quality-cards-card {
+                max-width: 100%; 
+            }
+        }
+    }
+}

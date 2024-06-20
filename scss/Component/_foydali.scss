@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.foydali {
+    width: 90%;
+    max-width: 1280px;
+    margin: 2cm auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .foydali-title {
+        color: #1F1D14;
+        font-family: "Fira Sans";
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .foydali-cards {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        background-color: #F2F2F2;
+
+        .foydali-cards-card {
+            width: 100%;
+            max-width: 49%;
+            background-color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 20px;
+            flex-grow: 1;
+            transition: transform 0.3s, box-shadow 0.3s;
+
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            .fcc-text {
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                h2 {
+                    color: #1F1D14;
+                    font-family: "Fira Sans";
+                    font-size: 32px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+
+                p {
+                    color: #000;
+                    font-family: Roboto;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 22px; 
+                }
+            }
+
+            .fcc-icon {
+                display: flex;
+                gap: 30px;
+
+                h2 {
+                    color: #333;
+                    font-family: "Fira Sans";
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    display: flex;
+                    gap: 5px;
+                }
+            }
+        }
+
+        .foydali-cards-card-2 {
+            width: 100%;
+            max-width: 49%;
+            background-color: #F2F2F2;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex-grow: 1;
+
+            .fcc-2-img {
+                width: 100%;
+                height: 85%;
+                background-color: #FFFFFF;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    transition: 0.5s;
+                }
+
+                &:hover img {
+                    transform: scale(1.2);
+                }
+            }
+
+            .fcc-2-text {
+                width: 100%;
+                height: 15%;
+                background-color: #FFFFFF;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                h2 {
+                    color: #000;
+                    font-family: "Fira Sans";
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 22px; 
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .foydali {
+        .foydali-title {
+            font-size: 28px; 
+            text-align: center;
+        }
+
+        .foydali-cards {
+            .foydali-cards-card, .foydali-cards-card-2 {
+                max-width: 48%; 
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .foydali {
+        .foydali-title {
+            font-size: 24px; 
+        }
+
+        .foydali-cards {
+            flex-direction: column; 
+            
+            .foydali-cards-card, .foydali-cards-card-2 {
+                max-width: 100%; 
+            }
+        }
+    }
+}

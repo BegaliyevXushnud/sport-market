@@ -14,8 +14,8 @@
     left: 0;
     width: 100%;
     z-index: 999;
-    background: #c04a4a;
     display: flex;
+    background: #1F1D14;
     flex-direction: column;
     align-items: center;
 
@@ -27,7 +27,7 @@
         justify-content: space-between;
         padding: 10px 20px;
         background: #1F1D14;
-
+margin-left: 0.5cm;
         .header__logo,
         .header__right,
         .header-location {
@@ -57,6 +57,7 @@
 
         .header__right {
             flex-grow: 3;
+
             .header__list {
                 display: flex;
                 gap: 10px;
@@ -76,9 +77,7 @@
                         color: var(--white, #FFF);
                         font-family: "Fira Sans";
                         font-size: 16px;
-                        font-style: normal;
                         font-weight: 400;
-                        line-height: normal;
                         text-decoration: none;
 
                         &:hover {
@@ -103,9 +102,7 @@
                 color: var(--white, #FFF);
                 font-family: "Fira Sans";
                 font-size: 16px;
-                font-style: normal;
                 font-weight: 400;
-                line-height: normal;
             }
         }
     }
@@ -153,9 +150,7 @@
                     color: var(--white, #FFF);
                     font-family: "Fira Sans";
                     font-size: 20px;
-                    font-style: normal;
                     font-weight: 400;
-                    line-height: normal;
                 }
             }
 
@@ -225,9 +220,7 @@
                 color: #1F1D14;
                 font-family: "Fira Sans";
                 font-size: 20px;
-                font-style: normal;
                 font-weight: 400;
-                line-height: normal;
                 transition: 0.5s;
 
                 &:hover {
@@ -270,7 +263,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 828px) {
     .header {
         .header__nav {
             flex-direction: column;

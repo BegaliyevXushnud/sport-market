@@ -1,0 +1,235 @@
+.footer {
+    width: 100%;
+    background-color: #1f1d14;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  margin-top: 8cm;
+    .footer-cards {
+      width: 100%;
+      max-width: 1600px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+  
+      .footer-cards-card {
+        flex: 1 1 calc(25% - 20px);
+        min-width: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+  
+        .footer-logo {
+          display: flex;
+          align-items: center;
+          margin-bottom: 20px;
+          .fl-text {
+            h3 {
+              color: #fff;
+              font-family: "Fira Sans";
+              font-size: 24px;
+              font-weight: 600;
+            }
+          }
+        }
+  
+        .fcc-text {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          h3 {
+            color: #fff;
+            font-family: Roboto;
+            font-size: 18px;
+            font-weight: 700;
+          }
+        }
+  
+        .locat {
+          margin-top: 20px;
+          h3 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            gap: 10px;
+            font-family: "Fira Sans";
+            font-size: 16px;
+            font-weight: 400;
+          }
+        }
+  
+        .fcc-btn {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+  
+          .fcc-btn-int {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            h3 {
+              color: #fff;
+              font-family: Roboto;
+              font-size: 18px;
+              font-weight: 700;
+            }
+            input {
+              width: 100%;
+              max-width: 235px;
+              height: 40px;
+              color: #9a9ea5;
+              border: none;
+              padding: 10px;
+              border-radius: 5px;
+              font-family: "Fira Sans";
+              font-size: 12px;
+              font-weight: 400;
+            }
+            button {
+              width: 100%;
+              max-width: 235px;
+              height: 40px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background-color: #fbd029;
+              border: none;
+              color: #1f1d14;
+              font-family: "Fira Sans";
+              font-size: 16px;
+              font-weight: 400;
+              transition: 0.5s;
+              &:hover {
+                background: transparent;
+                border: 1px solid #fbd029;
+                color: #fbd029;
+              }
+            }
+          }
+  
+          .fcc-btn-icon {
+            display: flex;
+            gap: 15px;
+            span {
+              color: #ffffff;
+              font-size: 24px;
+              cursor: pointer;
+              transition: 0.5s;
+              &:hover {
+                transform: scale(1.2);
+              }
+            }
+            .insta:hover {
+              color: violet;
+            }
+            .telegram:hover {
+              color: blue;
+            }
+            .git:hover {
+              color: rgb(72, 65, 126);
+            }
+          }
+        }
+      }
+    }
+  
+    .footer-lenght {
+      width: 100%;
+      max-width: 1600px;
+      border-top: 1px solid #f2f2f2;
+      display: flex;
+      align-items: center;
+     justify-content: space-between;
+      gap: 10px;
+      padding-top: 20px;
+  
+      .fl-all {
+        h3 {
+          color: #fff;
+          font-family: Roboto;
+          font-size: 12px;
+          font-weight: 300;
+        }
+      }
+  
+      .fl-list {
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          list-style: none;
+          gap: 20px;
+          justify-content: center;
+  
+          li {
+            color: #7b7e86;
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 400;
+            &:hover {
+              color: #99adeb;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // Responsive styles
+  @media (max-width: 1024px) {
+    .footer {
+        margin-top: 75cm;
+      .footer-cards {
+        justify-content: center;
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer {
+        margin-top: 260cm;
+      .footer-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+  
+      .footer-lenght {
+        flex-direction: column;
+        align-items: center;
+        .fl-list ul {
+          flex-direction: column;
+          gap: 10px;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer {
+        margin-top: 286cm;
+      .footer-cards-card {
+        .fcc-text h3,
+        .locat h3,
+        .fcc-btn-int h3 {
+          font-size: 16px;
+        }
+        .footer-logo .fl-text h3 {
+          font-size: 20px;
+        }
+        .fcc-btn-icon span {
+          font-size: 20px;
+        }
+      }
+  
+      .footer-lenght .fl-all h3,
+      .footer-lenght .fl-list ul li {
+        font-size: 12px;
+      }
+    }
+  }
+  
